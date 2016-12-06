@@ -14,4 +14,5 @@ void MethodeCondorcet::scrutin()const{
 			};
 		}
 	}
+	gagnant_=nbDeVictoire_[0];
 }
