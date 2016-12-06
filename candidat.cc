@@ -3,7 +3,7 @@ Candidat::Candidat(std::string nom,std::string prenom):nom_(nom),prenom_(prenom)
 	
 }
 Candidat::~Candidat(){}
-void Candidat::affiche(){//affiche les caracteristique d un candidat
+void Candidat::afficheDetail(){//affiche les caracteristique d un candidat
 	std::cout<<"---------------------------------"<<std::endl;
 	std::cout<< prenom_<<"\t"<< nom_<<std::endl;
 	std::map<int,int>::iterator it;
@@ -14,4 +14,22 @@ void Candidat::affiche(){//affiche les caracteristique d un candidat
 }
 void Candidat::ajouteDeVote(int rang, int nbDeVote){ //pour affecter le scorre d un candidat
 	repartitionVote_[rang]=nbDeVote;
+}
+
+void Candidat::affiche(){//affiche les caracteristique d un candidat
+	std::cout<< prenom_<<"\t"<< nom_<<std::endl;
+}
+
+int Candidat::nbDeVote(int rang){return repartitionVote_[rang];}
+
+bool Candidat::operator<(Candidat A) {
+    return A.repartitionVote_[1] < this->repartitionVote_[1];
+}
+
+bool Candidat::operator>(Candidat A) {
+    return A.repartitionVote_[1] > this->repartitionVote_[1];
+}
+
+std::string getname(){
+	return nom_;
 }
