@@ -23,6 +23,7 @@ class Candidat
 		//Interfaces
 		int nbDeVote(int rang);
 		std::string getname();
+		std::map<int,int> getrepartitionVote();
 	private:
 		//Attributs
 		const std::string nom_;

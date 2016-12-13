@@ -2,6 +2,7 @@
 #include "candidat.hh"
 #include "simulateur.hh"
 #include "methodecondorcet.hh"
+#include "methodeborda.hh"
 int main()
 {
   Candidat c1("ALOUI","Driss");
@@ -32,8 +33,14 @@ int main()
   s1.afficheCandidats();
   c2.afficheDetail();
 
+std::cout<<"Methode de Nicolas de Condorcet"<<std::endl;
   MethodeCondorcet mc(&s1);
   mc.findwinner();
   mc.afficheWinner();
+
+std::cout<<"Methode de Jean Charles de Borda"<<std::endl;
+  MethodeBorda mb(&s1);
+  mb.findwinner();
+  mb.afficheWinner();
   return 0;
 }

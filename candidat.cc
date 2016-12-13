@@ -33,3 +33,7 @@ bool Candidat::operator>(Candidat A) {
 std::string Candidat::getname(){
 	return nom_;
 }
+
+std::map<int,int> Candidat::getrepartitionVote(){
+	return repartitionVote_;
+}
