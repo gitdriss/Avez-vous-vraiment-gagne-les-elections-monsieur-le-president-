@@ -11,10 +11,10 @@ class MethodeCondorcet : public Methode
 		std::map<std::string,int> nbDeVictoire_;
 	public:
 		//constructeur
-		MethodeCondorcet(simulation* s);
+		MethodeCondorcet(Simulateur* s);
 		//destructeur
 		~MethodeCondorcet();
 		//methode
-		void scrutin()const;
+		void scrutin();
 };
 #endif

@@ -30,6 +30,6 @@ bool Candidat::operator>(Candidat A) {
     return A.repartitionVote_[1] > this->repartitionVote_[1];
 }
 
-std::string getname(){
+std::string Candidat::getname(){
 	return nom_;
 }

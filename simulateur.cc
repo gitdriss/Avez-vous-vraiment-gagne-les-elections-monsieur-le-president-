@@ -28,3 +28,7 @@ void Simulateur::afficheCandidats()
 	}
 	std::cout<<"---------------------------------"<<std::endl;	
 }
+
+std::list<Candidat*> Simulateur::getListeCandidats() const{
+	return listeCandidats_;
+}

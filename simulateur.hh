@@ -10,8 +10,8 @@
 class Simulateur
 {
 	private:
-		nbCandidat_;
 		std::list<Candidat*> listeCandidats_;
+		int nbCandidat_;
 		//std::list<Method*> liste_methode;
 	public:
 		//constructeur
@@ -22,5 +22,6 @@ class Simulateur
 		void addCandidat(Candidat*);
 		void afficheCandidats();
 		void run();
+		std::list<Candidat*> getListeCandidats() const;
 };
 #endif

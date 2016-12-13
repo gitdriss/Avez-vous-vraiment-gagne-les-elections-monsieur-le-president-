@@ -3,19 +3,19 @@
 #include <string>
 #include <sstream>
 #include <iostream>					
-#include "simulation.hh"
+#include "simulateur.hh"
 
 class Methode
 {
 	protected:
 		std::string gagnant_;
-		const simulation *s_;
+		const Simulateur *s_;
 	public:
 		//constructeur
-		Methode(simulation* s);
+		Methode(Simulateur* s);
 		//destructeur
 		~Methode();
 		//methode
-		virtual void scrutin()const = 0;
+		virtual void scrutin() = 0;
 };
 #endif
