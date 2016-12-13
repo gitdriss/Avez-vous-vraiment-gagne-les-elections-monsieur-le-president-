@@ -16,5 +16,6 @@ class MethodeCondorcet : public Methode
 		~MethodeCondorcet();
 		//methode
 		void scrutin();
+		void findwinner();
 };
 #endif

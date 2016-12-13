@@ -5,14 +5,20 @@ MethodeCondorcet::~MethodeCondorcet(){}
 void MethodeCondorcet::scrutin(){
 	std::list<Candidat*>::const_iterator it;
 	std::list<Candidat*>::const_iterator it2;
-	for (it = (s_)->getListeCandidats().begin(); it != (s_)->getListeCandidats().end(); it++)
+	std::list<Candidat*> listeC = (s_)->getListeCandidats();
+	for (it = listeC.begin(); it != listeC.end(); it++)
 	{
-		for (it2 = (s_)->getListeCandidats().begin(); it2 != (s_)->getListeCandidats().end(); it2++)
+		for (it2 = listeC.begin(); it2 != listeC.end(); it2++)
 		{
 			if((*it)>(*it2)){
 				nbDeVictoire_[(*it)->getname()]++;
-			};
+			}
 		}
 	}
-	gagnant_=nbDeVictoire_[0];
+	gagnant_=nbDeVictoire_.begin()->first;
+}
+
+void MethodeCondorcet::findwinner(){
+	scrutin();
+	gagnant_ = nbDeVictoire_.begin()->first;
 }

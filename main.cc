@@ -1,7 +1,7 @@
 #include <iostream>
 #include "candidat.hh"
 #include "simulateur.hh"
-
+#include "methodecondorcet.hh"
 int main()
 {
   Candidat c1("ALOUI","Driss");
@@ -31,4 +31,9 @@ int main()
   s1.addCandidat(&c4);
   s1.afficheCandidats();
   c2.afficheDetail();
+
+  MethodeCondorcet mc(&s1);
+  mc.findwinner();
+  mc.afficheWinner();
+  return 0;
 }
