@@ -3,35 +3,50 @@
 #include "simulateur.hh"
 #include "methodecondorcet.hh"
 #include "methodeborda.hh"
+#include <fstream>
 int main()
 {
-  Candidat c1("ALOUI","Driss");
-  Candidat c2("ALDEBERT","Louis");
-  Candidat c3("CHASSETUILLIER","Jules");
-  Candidat c4("LELAPIN","Jojo");
+
+// creation de la simulation
+
   Simulateur s1;
-  c1.ajouteDeVote(1, 50);
-  c1.ajouteDeVote(2, 20);
-  c1.ajouteDeVote(3, 20);
-  c1.ajouteDeVote(4, 20);
-  c2.ajouteDeVote(1, 52);
-  c2.ajouteDeVote(2, 20);
-  c2.ajouteDeVote(3, 30);
-  c2.ajouteDeVote(4, 10);
-  c3.ajouteDeVote(1, 500);
-  c3.ajouteDeVote(2, 60);
-  c3.ajouteDeVote(3, 20);
-  c3.ajouteDeVote(4, 24);
-  c4.ajouteDeVote(1, 58);
-  c4.ajouteDeVote(2, 8);
-  c4.ajouteDeVote(3, 2);
-  c4.ajouteDeVote(4, 21);
-  s1.addCandidat(&c1);
-  s1.addCandidat(&c2);
-  s1.addCandidat(&c3);
-  s1.addCandidat(&c4);
-  s1.afficheCandidats();
-  c2.afficheDetail();
+
+  std::ifstream file("election.txt");
+  std::string s;
+  file >> s;
+  std::vector<std::string> s2;
+  //separation des args
+  s2 = split( s,";" );
+  
+  std::list<ConvictiondeVote> listeConvictiondeVotes;
+  std::list<Candidat> listeCandidats;
+  
+  for(const auto& iter : s2)
+     {
+       std::vector<std::string> s3;
+       s3 = split( iter,"," );
+       listeCandidats.push_back(Candidat(s3[0],s3[1]));
+     }
+     
+      for( auto& iter2 : listeCandidats)
+     {
+       s1.addCandidat(&iter2);
+     }
+
+   s1.clotureInscriptionCandidats();   
+	
+  while( file >> s)
+    {
+      listeConvictiondeVotes.push_back(ConvictiondeVote(s1.getListeCandidats(),s));
+    }
+  file.close();
+
+  for( auto& iter3 : listeConvictiondeVotes)
+     {
+       s1.addConvictiondeVote(&iter3);
+     }
+
+// appel des differentes methodes de vote
 
 std::cout<<"Methode de Nicolas de Condorcet"<<std::endl;
   MethodeCondorcet mc(&s1);

@@ -3,20 +3,29 @@
 MethodeBorda::MethodeBorda(Simulateur* s):Methode(s){}
 MethodeBorda::~MethodeBorda(){}
 void MethodeBorda::scrutin(){
-	std::list<Candidat*>::const_iterator it;
-	std::list<Candidat*> listeC = (s_)->getListeCandidats();
-	std::map<int,int>::iterator it2;
-	for (it = listeC.begin(); it != listeC.end(); it++)
-	{
-		for(it2=(*it)->getrepartitionVote().begin();it2!=(*it)->getrepartitionVote().end();it2++) {
-			this->nbDePoint_[(*it)->getname()]=(listeC.size() + 1 - it2->first )*it2->second;
-		}
-		
+	std::list<ConvictiondeVote*>::const_iterator it3;
+	std::map<std::string,int>::const_iterator it4;
+	std::list<ConvictiondeVote*> listeCc = (s_)->getlisteConvictiondeVotes();
+	
+	
+	for(it3 = listeCc.begin(); it3 != listeCc.end(); it3++){
+		std::map<std::string,int> OrdrePreferenceCandidats = (*it3)->getOrdrePreferenceCandidats();
+		for(it4 = OrdrePreferenceCandidats.begin(); it4 != OrdrePreferenceCandidats.end(); it4++){	
+			nbDePoint_[it4->first]+=(1+(s_)->getnbCandidat()-it4->second)*(*it3)->getNbelecteur();
+		}	
 	}
-	gagnant_=nbDePoint_.begin()->first;
 }
 
 void MethodeBorda::findwinner(){
 	scrutin();
-	gagnant_ = nbDePoint_.begin()->first;
+	int tmp = nbDePoint_.begin()->second;
+	gagnant_=nbDePoint_.begin()->first;
+	for(const auto& iter : nbDePoint_)
+	{
+		std::cout<<iter.second<<"\t"<<iter.first<<std::endl;
+		if(iter.second>tmp){
+			gagnant_=iter.first;
+			tmp=iter.second;
+		}
+	}
 }

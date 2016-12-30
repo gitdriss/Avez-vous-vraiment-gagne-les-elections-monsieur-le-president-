@@ -6,6 +6,6 @@ CC=g++
 $(EXEC): $(OBJECTS)
 	$(CC) $(OBJECTS) `sdl-config --libs` -o $(EXEC)
 %.o: %.cc
-	$(CC) $(CCFLAGS) -c $< -o $@
+	$(CC) $(CCFLAGS) -c $< -o $@ -std=c++11
 clean:
 	rm -f $(OBJECTS) $(EXEC)
