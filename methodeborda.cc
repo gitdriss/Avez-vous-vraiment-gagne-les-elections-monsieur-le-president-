@@ -22,10 +22,18 @@ void MethodeBorda::findwinner(){
 	gagnant_=nbDePoint_.begin()->first;
 	for(const auto& iter : nbDePoint_)
 	{
-		std::cout<<iter.second<<"\t"<<iter.first<<std::endl;
 		if(iter.second>tmp){
 			gagnant_=iter.first;
 			tmp=iter.second;
 		}
 	}
+}
+
+void MethodeBorda::detailsWin(){
+	std::cout<<"Details des resultats"<<std::endl;
+	for(const auto& iter : nbDePoint_)
+	{
+		std::cout<<iter.second<<" pts\t"<<iter.first<<std::endl;
+	}
+	std::cout<<"---------------------------------"<<std::endl;
 }

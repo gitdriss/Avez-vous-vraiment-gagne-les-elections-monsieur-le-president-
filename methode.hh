@@ -18,6 +18,7 @@ class Methode
 		//methode
 		virtual void scrutin() = 0;
 		virtual void findwinner() = 0;
+		virtual void detailsWin() = 0;
 		void afficheWinner();
 };
 #endif

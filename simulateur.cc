@@ -35,7 +35,8 @@ void simulateur::add_methode(Method methode)
 
 void Simulateur::afficheCandidats()
 {
-	std::cout<<"---------------------------------"<<std::endl;	
+	std::cout<<"---------------------------------"<<std::endl;
+	std::cout<<"Les candidats en liste sont :"<<std::endl<<std::endl;	
 	std::list<Candidat*>::iterator it;
 	for (it = listeCandidats_.begin(); it != listeCandidats_.end(); it++)
 	{

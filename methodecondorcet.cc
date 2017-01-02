@@ -43,3 +43,12 @@ void MethodeCondorcet::findwinner(){
 		}
 	}
 }
+
+void MethodeCondorcet::detailsWin(){
+	std::cout<<"Details des resultats"<<std::endl;
+	for(const auto& iter : nbDeVictoire_)
+	{
+		std::cout<<iter.second<<" victoire(s)\t"<<iter.first<<std::endl;
+	}
+	std::cout<<"---------------------------------"<<std::endl;
+}

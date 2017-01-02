@@ -27,6 +27,8 @@ class ConvictiondeVote
 		//methode
 		std::map<std::string,int> getOrdrePreferenceCandidats();
 		int getNbelecteur();
+		void afficheConvictiondeVote();
+		void afficheConvictiondeVoteenTete();
 };
 
 #endif

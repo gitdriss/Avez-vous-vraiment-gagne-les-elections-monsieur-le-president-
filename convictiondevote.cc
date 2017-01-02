@@ -30,4 +30,34 @@ ConvictiondeVote::ConvictiondeVote(std::list<Candidat*> listeCandidats, std::str
 ConvictiondeVote::~ConvictiondeVote(){}
 
 std::map<std::string,int> ConvictiondeVote::getOrdrePreferenceCandidats(){return OrdrePreferenceCandidats_;}
+
 int ConvictiondeVote::getNbelecteur(){return nbelecteur_;}
+
+void ConvictiondeVote::afficheConvictiondeVote(){
+	int a = nbelecteur_;
+	std::stringstream ss;
+	ss << a;
+	std::string str = ss.str();
+	std::string s = "" + str + "\t\t\t";
+  	for( auto& iter : OrdrePreferenceCandidats_)
+     	{
+		int a2 = iter.second;
+		std::stringstream ss2;
+		ss2 << a2;
+		std::string str2 = ss2.str();
+       		s+= str2+"\t";
+       		
+     	}
+	std::cout<<s<<std::endl;
+}
+
+void ConvictiondeVote::afficheConvictiondeVoteenTete(){
+	std::cout<<"---------------------------------"<<std::endl;
+	std::cout<<"Les votes se sont reparis de cette maniere :"<<std::endl<<std::endl;
+	std::string s = "Nb électeurs\t\t";
+  	for( auto& iter : OrdrePreferenceCandidats_)
+     	{
+       		s+= iter.first + " ";
+     	}
+	std::cout<<s<<std::endl;
+}

@@ -8,5 +8,3 @@
 // returns a vector of string for each substring in s separeted by 
 // at least one character in s_s 
 std::vector<std::string> split(const std::string& s, const std::string& s_s);
-
-
