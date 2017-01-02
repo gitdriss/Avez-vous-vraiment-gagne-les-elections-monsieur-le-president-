@@ -3,6 +3,9 @@
 #include "simulateur.hh"
 #include "methodecondorcet.hh"
 #include "methodeborda.hh"
+#include "methodeen1tour.hh"
+#include "methodeenntour.hh"
+#include "methodefrancaise.hh"
 #include <fstream>
 int main()
 {
@@ -51,18 +54,36 @@ std::cout<<"---------------------------------"<<std::endl;
      }
 
 // appel des differentes methodes de vote
-std::cout<<"---------------------------------"<<std::endl;
-std::cout<<"---------------------------------"<<std::endl;
-std::cout<<"Methode de Nicolas de Condorcet"<<std::endl;
+   std::cout<<"---------------------------------"<<std::endl;
+  std::cout<<"---------------------------------"<<std::endl;
+  std::cout<<"Methode de Nicolas de Condorcet"<<std::endl;
   MethodeCondorcet mc(&s1);
   mc.findwinner();
   mc.afficheWinner();
   mc.detailsWin();
-std::cout<<"---------------------------------"<<std::endl;
-std::cout<<"Methode de Jean Charles de Borda"<<std::endl;
+  std::cout<<"---------------------------------"<<std::endl;
+  std::cout<<"Methode de Jean Charles de Borda"<<std::endl;
   MethodeBorda mb(&s1);
   mb.findwinner();
   mb.afficheWinner();
   mb.detailsWin();
+  std::cout<<"---------------------------------"<<std::endl;
+  std::cout<<"Methode en 1 tour"<<std::endl;
+  MethodeEn1Tour m1(&s1);
+  m1.findwinner();
+  m1.afficheWinner();
+  m1.detailsWin();
+  std::cout<<"---------------------------------"<<std::endl;
+  std::cout<<"Methode en n tour"<<std::endl;
+  MethodeEnNTour mn(&s1);
+  mn.findwinner();
+  mn.afficheWinner();
+  mn.detailsWin();
+  std::cout<<"---------------------------------"<<std::endl;
+  std::cout<<"Methode francaise"<<std::endl;
+  MethodeFrancaise mf(&s1);
+  mf.findwinner();
+  mf.afficheWinner();
+  mf.detailsWin();
   return 0;
 }
