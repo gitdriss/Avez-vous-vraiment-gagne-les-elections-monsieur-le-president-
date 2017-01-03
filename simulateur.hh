@@ -14,7 +14,7 @@ class Simulateur
 		std::list<Candidat*> listeCandidats_;
 		std::list<ConvictiondeVote*> listeConvictiondeVotes_;
 		int nbCandidat_;
-		int droitInscriptionCandidat_; // 0 inscription auorisé, 1 inscription pus autorisé
+		int droitInscriptionCandidat_; // 0 inscription auorisé, 1 inscription plus autorisé
 		//std::list<Method*> liste_methode;
 	public:
 		//constructeur

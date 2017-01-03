@@ -37,7 +37,7 @@ std::string MethodeParTour::elimineCandidat(std::map<std::string,int> resultatvo
 	for(auto& iter : resultatvote){tmp = iter.second;nametmp=iter.first;}
 	for(auto& iter2 : resultatvote)
 	{
-		if(iter2.second>tmp){
+		if(iter2.second<tmp){
 			nametmp=iter2.first;
 			tmp=iter2.second;
 		}
