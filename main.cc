@@ -1,3 +1,48 @@
+/*
+N7-IOB LANGAGE OBJET C++-UML
+Projet élection piege à con
+BRAUNSTEIN BREJON
+*/
+
+
+/*
+Avez vous vraiment gagné les élections monsieur le president?
+*/
+
+
+/*
+Date: 22/01/2017
+ 
+ALDEBERT Louis
+ALOUI Driss 
+
+MAIN 4 Polytech Paris UPMC
+*/
+
+
+/*
+Liste des fichiers
+candidat.cc          methodeborda.cc      methodeenntour.cc    ProjetC++.xmi
+candidat.hh          methodeborda.hh      methodeenntour.hh    README.md
+convictiondevote.cc  methode.cc           methodefrancaise.cc  simulateur.cc
+convictiondevote.hh  methodecondorcet.cc  methodefrancaise.hh  simulateur.hh
+election.txt         methodecondorcet.hh  methode.hh           utility.cc
+main.cc              methodeen1tour.cc    methodepartour.cc    utility.hh
+Makefile             methodeen1tour.hh    methodepartour.hh
+*/
+
+
+/*
+Utilisation
+Make
+./IloveC++
+*/
+
+/*
+Aucune bibliothèque particulière n'est utilisé par ce programme en dehors des bibliothèques standards.
+*/
+
+	
 #include <iostream>
 #include "candidat.hh"
 #include "simulateur.hh"
@@ -67,11 +112,7 @@ void f(){
 	int cpt =0;
 	for( auto& iter3 : listeConvictiondeVotes)
 	{
-		if(cpt==0)
-			iter3.afficheConvictiondeVoteenTete();
 		s1.addConvictiondeVote(&iter3);
-		
-		iter3.afficheConvictiondeVote();
 		cpt++;
 	}
 	system("clear");
@@ -185,9 +226,10 @@ void f(){
 					std::cin>>x;
 					if(x==1){
 	 					m1.detailsWin();
- 					}
- 					std::cout<<"Appuyer sur un CHIFFRE pour revenir à la simulation puis valider avec la touche ENTREE"<<std::endl;
-					std::cin>>x;
+ 						std::cout<<"Appuyer sur un CHIFFRE pour revenir à la simulation puis valider avec la touche ENTREE"<<std::endl;
+						std::cin>>x;
+					}
+ 					
             				break;
             			}
 			case 3:  {
@@ -200,9 +242,9 @@ void f(){
 					std::cin>>x;
 					if(x==1){
 						mf.detailsWin();
+						std::cout<<"Appuyer sur un CHIFFRE pour revenir à la simulaion  puis valider avec la touche ENTREE"<<std::endl;
+						std::cin>>x;
 					}
-					std::cout<<"Appuyer sur un CHIFFRE pour revenir à la simulaion  puis valider avec la touche ENTREE"<<std::endl;
-					std::cin>>x;
 		    			break; 
             			}
 			case 4:  {
@@ -215,9 +257,9 @@ void f(){
 					std::cin>>x;
 					if(x==1){
 						mn.detailsWin();
+						std::cout<<"Appuyer sur un CHIFFRE pour revenir à la simulation  puis valider avec la touche ENTREE"<<std::endl;
+						std::cin>>x;
 					}
-					std::cout<<"Appuyer sur un CHIFFRE pour revenir à la simulation  puis valider avec la touche ENTREE"<<std::endl;
-					std::cin>>x;
 		    			break; 
 	    			} 
          		case 5:  {
@@ -230,9 +272,9 @@ void f(){
 					std::cin>>x;
 					if(x==1){
 						mb.detailsWin();
+						std::cout<<"Appuyer sur un CHIFFRE pour revenir à la simulaion puis valider avec la touche ENTREE"<<std::endl;
+						std::cin>>x;
 					}
-					std::cout<<"Appuyer sur un CHIFFRE pour revenir à la simulaion puis valider avec la touche ENTREE"<<std::endl;
-					std::cin>>x;
 		    			break;
             			}
          		case 6:  {
@@ -245,9 +287,9 @@ void f(){
 					std::cin>>x;
 					if(x==1){
 						mc.detailsWin();
+						std::cout<<"Appuyer sur un CHIFFRE pour revenir à la simulaion puis valider avec la touche ENTREE"<<std::endl;
+						std::cin>>x;
 					}
-					std::cout<<"Appuyer sur un CHIFFRE pour revenir à la simulaion puis valider avec la touche ENTREE"<<std::endl;
-					std::cin>>x;
 		    			break;
             			}
 			case 7:  {
