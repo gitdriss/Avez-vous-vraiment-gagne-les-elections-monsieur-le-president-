@@ -53,7 +53,7 @@ void ConvictiondeVote::afficheConvictiondeVote(){
 
 void ConvictiondeVote::afficheConvictiondeVoteenTete(){
 	std::cout<<"---------------------------------"<<std::endl;
-	std::cout<<"Les votes se sont reparis de cette maniere :"<<std::endl<<std::endl;
+	std::cout<<"Les votes se sont repartis de cette manière :"<<std::endl<<std::endl;
 	std::string s = "Nb électeurs\t\t";
   	for( auto& iter : OrdrePreferenceCandidats_)
      	{

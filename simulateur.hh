@@ -26,7 +26,6 @@ class Simulateur
 		void addConvictiondeVote(ConvictiondeVote* ConvictiondeVote);
 		void afficheCandidats();
 		void clotureInscriptionCandidats();
-		void run();
 		int getnbCandidat() const;
 		std::list<Candidat*> getListeCandidats() const;
 		std::list<ConvictiondeVote*> getlisteConvictiondeVotes() const;
