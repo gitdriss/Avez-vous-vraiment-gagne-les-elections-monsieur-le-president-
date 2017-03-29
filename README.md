@@ -32,7 +32,6 @@ Make clean
 Aucune bibliothèque particulière n'est utilisé par ce programme en dehors des bibliothèques standards.
 
 
-
 Merci d'utiliser exclusivement les CHIFFRES pour les selections dans les menus
 
 
