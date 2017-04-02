@@ -1,32 +1,35 @@
-# Avez-vous-vraiment-gagne-les-elections-monsieur-le-president-
+Avez-vous-vraiment-gagne-les-elections-monsieur-le-president-
+===
 Projet élection piege à con N7-IOB LANGAGE OBJET C++-UML - BRAUNSTEIN Cécile, BREJON Jean-Baptiste
 
-N7-IOB LANGAGE OBJET C++-UML
-Projet élection piege à con
-BRAUNSTEIN BREJON
+    N7-IOB LANGAGE OBJET C++-UML
+    Projet élection piege à con
+    BRAUNSTEIN BREJON
 
 Date: 22/01/2017
  
-ALDEBERT Louis
-ALOUI Driss 
+    ALDEBERT Louis
+    ALOUI Driss 
 
 MAIN 4 Polytech Paris UPMC
 
 
 Liste des fichiers
-candidat.cc          methodeborda.cc      methodeenntour.cc    ProjetC++.xmi
-candidat.hh          methodeborda.hh      methodeenntour.hh    README.md
-convictiondevote.cc  methode.cc           methodefrancaise.cc  simulateur.cc
-convictiondevote.hh  methodecondorcet.cc  methodefrancaise.hh  simulateur.hh
-election.txt         methodecondorcet.hh  methode.hh           utility.cc
-main.cc              methodeen1tour.cc    methodepartour.cc    utility.hh
-Makefile             methodeen1tour.hh    methodepartour.hh
+------------
+    candidat.cc          methodeborda.cc      methodeenntour.cc    ProjetC++.xmi
+    candidat.hh          methodeborda.hh      methodeenntour.hh    README.md
+    convictiondevote.cc  methode.cc           methodefrancaise.cc  simulateur.cc
+    convictiondevote.hh  methodecondorcet.cc  methodefrancaise.hh  simulateur.hh
+    election.txt         methodecondorcet.hh  methode.hh           utility.cc
+    main.cc              methodeen1tour.cc    methodepartour.cc    utility.hh
+    Makefile             methodeen1tour.hh    methodepartour.hh
 
 
 Utilisation
-Make
-./IloveC++
-Make clean
+------------
+    Make
+    ./IloveC++
+    Make clean
 
 
 Aucune bibliothèque particulière n'est utilisé par ce programme en dehors des bibliothèques standards.
@@ -38,7 +41,8 @@ Merci d'utiliser exclusivement les CHIFFRES pour les selections dans les menus
 Le but du programme est de déterminer le vainqueur d'une élection à partir du résultat de vote suivant différentes méthodes.
 
 
-Utilisation :
+Navigation
+------------
 - Lancer une simulation à partir du menu principal
 - Naviguer dans les sous menu pour voir le résultat et le détail de la simulation
 
@@ -49,7 +53,7 @@ Toutes les données sont extraites du fichier 'election.txt'. Elles peuvent êtr
 
 
 Description des méthodes
-
+------------
 Les Méthodes par tour
 - Méthode simple en un tour
 C'est certainement le système électoral le plus basique. En effet c'est le candidat qui a reçu le plus de voix qui est élu en un coup.
